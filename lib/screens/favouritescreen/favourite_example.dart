@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_projects/provider/favourite_provider.dart';
+import 'package:flutter_projects/screens/favouritescreen/selected_favourite_screen.dart';
 import 'package:provider/provider.dart';
 
 class Favourite extends StatefulWidget {
@@ -17,6 +18,9 @@ class _FavouriteState extends State<Favourite> {
       appBar: AppBar(
         backgroundColor: Colors.blueAccent,
         title: const Text("favourite provider"),
+        actions: [IconButton(onPressed: (){
+          Navigator.push(context, MaterialPageRoute(builder: (context)=>SelectedFavourite()));
+        }, icon: Icon(Icons.favorite))],
       ),
       body: Column(
         children: [

@@ -3,7 +3,7 @@ import 'package:flutter_projects/provider/count_provider.dart';
 import 'package:flutter_projects/provider/favourite_provider.dart';
 import 'package:flutter_projects/provider/slider_provider.dart';
 
-import 'package:flutter_projects/screens/favourite_example.dart';
+import 'package:flutter_projects/screens/favouritescreen/favourite_example.dart';
 
 import 'package:provider/provider.dart';
 
