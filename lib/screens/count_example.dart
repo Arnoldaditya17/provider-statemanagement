@@ -1,3 +1,5 @@
+import 'dart:async';
+
 import 'package:flutter/material.dart';
 
 import 'package:provider/provider.dart';
@@ -12,6 +14,15 @@ class Counter extends StatefulWidget {
 }
 
 class _CounterState extends State<Counter> {
+//   @override
+//   void initState() {
+//     // TODO: implement initState
+//     super.initState();
+//     final countProvider = Provider.of<CountProvider>(context,listen: false);
+//     Timer.periodic(Duration(minutes: 1), (timer) {
+// countProvider.setCount();
+//     });
+//   }
   @override
   Widget build(BuildContext context) {
     final countProvider = Provider.of<CountProvider>(context,listen: false);
