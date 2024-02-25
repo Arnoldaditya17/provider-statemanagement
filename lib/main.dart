@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_projects/provider/count_provider.dart';
+import 'package:flutter_projects/provider/favourite_provider.dart';
 import 'package:flutter_projects/provider/slider_provider.dart';
-import 'package:flutter_projects/screens/count_example.dart';
-import 'package:flutter_projects/screens/slider_example.dart';
+
+import 'package:flutter_projects/screens/favourite_example.dart';
+
 import 'package:provider/provider.dart';
 
 void main() {
@@ -14,11 +16,21 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return ChangeNotifierProvider(
-      create: (_) => SliderProvider(),
+    return MultiProvider(
+      providers: [
+        ChangeNotifierProvider(
+          create: (_) => SliderProvider(),
+        ),
+        ChangeNotifierProvider(
+          create: (_) => CountProvider(),
+        ),
+        ChangeNotifierProvider(
+          create: (_) => FavouriteProvider(),
+        ),
+      ],
       child: const MaterialApp(
         debugShowCheckedModeBanner: false,
-        home: Slide(),
+        home: Favourite(),
       ),
     );
   }
